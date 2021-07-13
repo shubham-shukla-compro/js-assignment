@@ -1,0 +1,502 @@
+[
+  {
+    "id": 0,
+    "genre": "Thriller",
+    "price": 16
+  },
+  {
+    "id": 1,
+    "genre": "Biography",
+    "price": 96
+  },
+  {
+    "id": 2,
+    "genre": "Romance",
+    "price": 90
+  },
+  {
+    "id": 3,
+    "genre": "Adventure",
+    "price": 87
+  },
+  {
+    "id": 4,
+    "genre": "Crime",
+    "price": 42
+  },
+  {
+    "id": 5,
+    "genre": "Biography",
+    "price": 46
+  },
+  {
+    "id": 6,
+    "genre": "Romance",
+    "price": 58
+  },
+  {
+    "id": 7,
+    "genre": "Adventure",
+    "price": 19
+  },
+  {
+    "id": 8,
+    "genre": "Crime",
+    "price": 13
+  },
+  {
+    "id": 9,
+    "genre": "Biography",
+    "price": 93
+  },
+  {
+    "id": 10,
+    "genre": "Romance",
+    "price": 48
+  },
+  {
+    "id": 11,
+    "genre": "Horror",
+    "price": 12
+  },
+  {
+    "id": 12,
+    "genre": "Romance",
+    "price": 46
+  },
+  {
+    "id": 13,
+    "genre": "Thriller",
+    "price": 52
+  },
+  {
+    "id": 14,
+    "genre": "Adventure",
+    "price": 75
+  },
+  {
+    "id": 15,
+    "genre": "Biography",
+    "price": 13
+  },
+  {
+    "id": 16,
+    "genre": "Romance",
+    "price": 99
+  },
+  {
+    "id": 17,
+    "genre": "Adventure",
+    "price": 23
+  },
+  {
+    "id": 18,
+    "genre": "Drama",
+    "price": 80
+  },
+  {
+    "id": 19,
+    "genre": "Biography",
+    "price": 36
+  },
+  {
+    "id": 20,
+    "genre": "Fantasy",
+    "price": 85
+  },
+  {
+    "id": 21,
+    "genre": "Biography",
+    "price": 55
+  },
+  {
+    "id": 22,
+    "genre": "Thriller",
+    "price": 37
+  },
+  {
+    "id": 23,
+    "genre": "Crime",
+    "price": 15
+  },
+  {
+    "id": 24,
+    "genre": "Romance",
+    "price": 98
+  },
+  {
+    "id": 25,
+    "genre": "Crime",
+    "price": 18
+  },
+  {
+    "id": 26,
+    "genre": "Adventure",
+    "price": 58
+  },
+  {
+    "id": 27,
+    "genre": "Romance",
+    "price": 82
+  },
+  {
+    "id": 28,
+    "genre": "Biography",
+    "price": 53
+  },
+  {
+    "id": 29,
+    "genre": "Fantasy",
+    "price": 65
+  },
+  {
+    "id": 30,
+    "genre": "Horror",
+    "price": 82
+  },
+  {
+    "id": 31,
+    "genre": "Horror",
+    "price": 64
+  },
+  {
+    "id": 32,
+    "genre": "Adventure",
+    "price": 87
+  },
+  {
+    "id": 33,
+    "genre": "Fantasy",
+    "price": 98
+  },
+  {
+    "id": 34,
+    "genre": "Biography",
+    "price": 87
+  },
+  {
+    "id": 35,
+    "genre": "Adventure",
+    "price": 44
+  },
+  {
+    "id": 36,
+    "genre": "Romance",
+    "price": 44
+  },
+  {
+    "id": 37,
+    "genre": "Adventure",
+    "price": 79
+  },
+  {
+    "id": 38,
+    "genre": "Adventure",
+    "price": 56
+  },
+  {
+    "id": 39,
+    "genre": "Fantasy",
+    "price": 45
+  },
+  {
+    "id": 40,
+    "genre": "Romance",
+    "price": 20
+  },
+  {
+    "id": 41,
+    "genre": "Biography",
+    "price": 100
+  },
+  {
+    "id": 42,
+    "genre": "Romance",
+    "price": 92
+  },
+  {
+    "id": 43,
+    "genre": "Drama",
+    "price": 28
+  },
+  {
+    "id": 44,
+    "genre": "Horror",
+    "price": 22
+  },
+  {
+    "id": 45,
+    "genre": "Crime",
+    "price": 62
+  },
+  {
+    "id": 46,
+    "genre": "Thriller",
+    "price": 11
+  },
+  {
+    "id": 47,
+    "genre": "Crime",
+    "price": 95
+  },
+  {
+    "id": 48,
+    "genre": "Crime",
+    "price": 45
+  },
+  {
+    "id": 49,
+    "genre": "Drama",
+    "price": 21
+  },
+  {
+    "id": 50,
+    "genre": "Horror",
+    "price": 44
+  },
+  {
+    "id": 51,
+    "genre": "Thriller",
+    "price": 91
+  },
+  {
+    "id": 52,
+    "genre": "Adventure",
+    "price": 99
+  },
+  {
+    "id": 53,
+    "genre": "Horror",
+    "price": 32
+  },
+  {
+    "id": 54,
+    "genre": "Biography",
+    "price": 11
+  },
+  {
+    "id": 55,
+    "genre": "Romance",
+    "price": 85
+  },
+  {
+    "id": 56,
+    "genre": "Crime",
+    "price": 22
+  },
+  {
+    "id": 57,
+    "genre": "Thriller",
+    "price": 43
+  },
+  {
+    "id": 58,
+    "genre": "Adventure",
+    "price": 26
+  },
+  {
+    "id": 59,
+    "genre": "Biography",
+    "price": 86
+  },
+  {
+    "id": 60,
+    "genre": "Horror",
+    "price": 72
+  },
+  {
+    "id": 61,
+    "genre": "Thriller",
+    "price": 89
+  },
+  {
+    "id": 62,
+    "genre": "Fantasy",
+    "price": 68
+  },
+  {
+    "id": 63,
+    "genre": "Horror",
+    "price": 34
+  },
+  {
+    "id": 64,
+    "genre": "Fantasy",
+    "price": 69
+  },
+  {
+    "id": 65,
+    "genre": "Drama",
+    "price": 98
+  },
+  {
+    "id": 66,
+    "genre": "Horror",
+    "price": 87
+  },
+  {
+    "id": 67,
+    "genre": "Romance",
+    "price": 46
+  },
+  {
+    "id": 68,
+    "genre": "Thriller",
+    "price": 34
+  },
+  {
+    "id": 69,
+    "genre": "Crime",
+    "price": 47
+  },
+  {
+    "id": 70,
+    "genre": "Thriller",
+    "price": 52
+  },
+  {
+    "id": 71,
+    "genre": "Romance",
+    "price": 92
+  },
+  {
+    "id": 72,
+    "genre": "Fantasy",
+    "price": 84
+  },
+  {
+    "id": 73,
+    "genre": "Adventure",
+    "price": 12
+  },
+  {
+    "id": 74,
+    "genre": "Fantasy",
+    "price": 24
+  },
+  {
+    "id": 75,
+    "genre": "Biography",
+    "price": 57
+  },
+  {
+    "id": 76,
+    "genre": "Romance",
+    "price": 53
+  },
+  {
+    "id": 77,
+    "genre": "Thriller",
+    "price": 61
+  },
+  {
+    "id": 78,
+    "genre": "Horror",
+    "price": 61
+  },
+  {
+    "id": 79,
+    "genre": "Biography",
+    "price": 11
+  },
+  {
+    "id": 80,
+    "genre": "Crime",
+    "price": 88
+  },
+  {
+    "id": 81,
+    "genre": "Drama",
+    "price": 66
+  },
+  {
+    "id": 82,
+    "genre": "Drama",
+    "price": 16
+  },
+  {
+    "id": 83,
+    "genre": "Romance",
+    "price": 71
+  },
+  {
+    "id": 84,
+    "genre": "Adventure",
+    "price": 11
+  },
+  {
+    "id": 85,
+    "genre": "Horror",
+    "price": 37
+  },
+  {
+    "id": 86,
+    "genre": "Horror",
+    "price": 66
+  },
+  {
+    "id": 87,
+    "genre": "Drama",
+    "price": 25
+  },
+  {
+    "id": 88,
+    "genre": "Horror",
+    "price": 52
+  },
+  {
+    "id": 89,
+    "genre": "Fantasy",
+    "price": 41
+  },
+  {
+    "id": 90,
+    "genre": "Thriller",
+    "price": 77
+  },
+  {
+    "id": 91,
+    "genre": "Thriller",
+    "price": 86
+  },
+  {
+    "id": 92,
+    "genre": "Drama",
+    "price": 98
+  },
+  {
+    "id": 93,
+    "genre": "Romance",
+    "price": 24
+  },
+  {
+    "id": 94,
+    "genre": "Crime",
+    "price": 44
+  },
+  {
+    "id": 95,
+    "genre": "Thriller",
+    "price": 34
+  },
+  {
+    "id": 96,
+    "genre": "Crime",
+    "price": 21
+  },
+  {
+    "id": 97,
+    "genre": "Crime",
+    "price": 19
+  },
+  {
+    "id": 98,
+    "genre": "Adventure",
+    "price": 80
+  },
+  {
+    "id": 99,
+    "genre": "Horror",
+    "price": 11
+  }
+]
