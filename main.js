@@ -1,20 +1,12 @@
-// Fetch all books data
-getBooksData = (sorted) => {
-  fetch('booksData.json')
-    .then((res) => res.json())
-    .then((data) => {
-      loadAllBooks(data, sorted);
-    });
-};
-getBooksData();
+let sorted = 0;
 
 // Load all books
-loadAllBooks = (booksData, sorted) => {
+const loadAllBooks = (booksData) => {
   let output = '';
 
-  if (sorted == 1) {
+  if (sorted === 1) {
     booksData.sort((a, b) => a.price - b.price);
-  } else if (sorted == 2) {
+  } else if (sorted === 2) {
     booksData.sort((a, b) => b.price - a.price);
   }
 
@@ -24,101 +16,46 @@ loadAllBooks = (booksData, sorted) => {
                   <td>${book.genre}</td>
                   <td>${book.price * 10}</td>
                </tr>`;
+    return output;
   });
-
-  let tbody = document.getElementById('all-books-field');
-
-  tbody.innerHTML = output;
+  document.getElementById('all-books-field').innerHTML = output;
 };
 
-// Search Book By Id
-
-let searchBtnId = document.getElementById('btn-search-id');
-
-searchBtnId.addEventListener('click', () => {
-  let searchInputId = document.getElementById('input-search-id');
-  searchBookById(searchInputId.value);
-});
-
-searchBookById = (inputId) => {
+// Fetch all books data
+const getBooksData = () => {
   fetch('booksData.json')
     .then((res) => res.json())
     .then((data) => {
-      let examinedBook;
-      data.map((book) => {
-        if (inputId == book.id) examinedBook = book;
-      });
-
-      if (examinedBook == undefined) {
-        alert("Oops can't find book with this id");
-      } else {
-        showExaminedBook(examinedBook);
-      }
+      loadAllBooks(data);
     });
 };
+getBooksData();
 
-// Search book By Genre
-
-let searchBtnGenre = document.getElementById('btn-search-genre');
-
-searchBtnGenre.addEventListener('click', () => {
-  let searchInputGenre = document.getElementById('input-search-genre');
-  searchBookByGenre(searchInputGenre.value);
-});
-
-searchBookByGenre = (inputGenre) => {
+// Show Similar Books
+const showSimilarBooks = (book) => {
   fetch('booksData.json')
     .then((res) => res.json())
     .then((data) => {
-      let examinedBook;
-      data.some((book) => {
-        if (book.genre.toLowerCase() == inputGenre.toLowerCase()) {
-          examinedBook = book;
-          return true;
+      let output = '';
+      data.map((similarBook) => {
+        if (similarBook.genre === book.genre && similarBook.id !== book.id) {
+          output += `<tr>
+                    <td>${similarBook.id}</td>
+                    <td>${similarBook.genre}</td>
+                    <td>${similarBook.price * 10}</td>
+                  </tr>`;
         }
+        return output;
       });
-
-      if (examinedBook == undefined) {
-        alert("Oops can't find book with this genre");
-      } else {
-        showExaminedBook(examinedBook);
-      }
+      document.getElementById('similar-books-field').innerHTML = output;
     });
 };
 
-// Search Book by Price
-
-let searchBtnPrice = document.getElementById('btn-search-price');
-
-searchBtnPrice.addEventListener('click', () => {
-  let searchInputPrice = document.getElementById('input-search-price');
-  searchBookByPrice(searchInputPrice.value);
-});
-
-searchBookByPrice = (inputPrice) => {
-  fetch('booksData.json')
-    .then((res) => res.json())
-    .then((data) => {
-      let examinedBook;
-      data.some((book) => {
-        if (book.price * 10 == inputPrice) {
-          examinedBook = book;
-          return true;
-        }
-      });
-
-      if (examinedBook == undefined) {
-        alert("Oops can't find book with this price");
-      } else {
-        showExaminedBook(examinedBook);
-      }
-    });
-};
-
-showExaminedBook = (book) => {
-  let bookId = document.getElementById('examined-book-id');
-  let bookPrice = document.getElementById('examined-book-price');
-  let bookGenre = document.getElementById('examined-book-genre');
+// Show Examined Book
+const showExaminedBook = (book) => {
+  const bookId = document.getElementById('examined-book-id');
+  const bookPrice = document.getElementById('examined-book-price');
+  const bookGenre = document.getElementById('examined-book-genre');
 
   bookId.innerHTML = `<b>${book.id}</b>`;
   bookPrice.innerHTML = `<b>${book.price * 10}</b>`;
@@ -127,33 +64,88 @@ showExaminedBook = (book) => {
   showSimilarBooks(book);
 };
 
-showSimilarBooks = (book) => {
-  let tbody = document.getElementById('similar-books-field');
-
+// Search Book By Id
+const searchBookById = (inputId) => {
   fetch('booksData.json')
     .then((res) => res.json())
     .then((data) => {
-      let output = '';
-      data.map((similarBook) => {
-        if (similarBook.genre == book.genre && similarBook.id != book.id) {
-          output += `<tr>
-                    <td>${similarBook.id}</td>
-                    <td>${similarBook.genre}</td>
-                    <td>${similarBook.price * 10}</td>
-                  </tr>`;
+      let examinedBook;
+      data.map((book) => {
+        if (book.id === Number(inputId)) {
+          examinedBook = book;
         }
+        return examinedBook;
       });
-      tbody.innerHTML = output;
+
+      if (!examinedBook) {
+        alert("Oops can't find book with this id");
+      } else {
+        showExaminedBook(examinedBook);
+      }
     });
 };
 
-// Sorting Price (Asc/Dsc)
+document.getElementById('btn-search-id').addEventListener('click', () => {
+  searchBookById(document.getElementById('input-search-id').value);
+});
 
-let sortPriceEle = document.getElementById('sort-price-icon-all');
-let sorted = 0;
+// Search book By Genre
+const searchBookByGenre = (inputGenre) => {
+  fetch('booksData.json')
+    .then((res) => res.json())
+    .then((data) => {
+      let examinedBook;
+      data.some((book) => {
+        if (book.genre.toLowerCase() === inputGenre.toLowerCase()) {
+          examinedBook = book;
+          return true;
+        }
+        return false;
+      });
+
+      if (!examinedBook) {
+        alert("Oops can't find book with this genre");
+      } else {
+        showExaminedBook(examinedBook);
+      }
+    });
+};
+
+document.getElementById('btn-search-genre').addEventListener('click', () => {
+  searchBookByGenre(document.getElementById('input-search-genre').value);
+});
+
+// Search Book by Price
+const searchBookByPrice = (inputPrice) => {
+  fetch('booksData.json')
+    .then((res) => res.json())
+    .then((data) => {
+      let examinedBook;
+      data.some((book) => {
+        if (book.price * 10 === Number(inputPrice)) {
+          examinedBook = book;
+          return true;
+        }
+        return false;
+      });
+
+      if (!examinedBook) {
+        alert("Oops can't find book with this price");
+      } else {
+        showExaminedBook(examinedBook);
+      }
+    });
+};
+
+document.getElementById('btn-search-price').addEventListener('click', () => {
+  searchBookByPrice(document.getElementById('input-search-price').value);
+});
+
+// Sorting Price (Asc/Dsc)
+const sortPriceEle = document.getElementById('sort-price-icon-all');
 
 sortPriceEle.addEventListener('click', () => {
-  if (sorted == 0 || sorted == 2) {
+  if (sorted === 0 || sorted === 2) {
     sorted = 1;
     sortPriceEle.innerHTML = `
                             <svg
@@ -169,7 +161,7 @@ sortPriceEle.addEventListener('click', () => {
                             />
                             </svg>
                             `;
-  } else if (sorted == 1) {
+  } else if (sorted === 1) {
     sorted = 2;
     sortPriceEle.innerHTML = `
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sort-down" viewBox="0 0 16 16">
